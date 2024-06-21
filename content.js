@@ -9,10 +9,7 @@ function insertDownloadButton() {
         downloadButton.style.width = "50px";
         downloadButton.style.background="none";
         downloadButton.style.color="white";
-        downloadButton.addEventListener('click', () => {
-            // Add your download logic here
-        });
-
+    
         videoTitleElement.insertAdjacentElement('afterend', downloadButton);
 
         downloadButton.addEventListener("click",async(e)=>{
