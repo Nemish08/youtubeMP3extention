@@ -1,0 +1,33 @@
+{
+    "name": "youtube mp3 download",
+    "description": "youtube video mp3 download",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+      
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+     
+    "options_page": "options.html",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "/images/download_icon.png",
+        "32": "/images/download_icon.png",
+        "48": "/images/download_icon.png"
+    },
+    "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*","<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
